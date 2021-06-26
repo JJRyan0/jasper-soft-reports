@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Dasboard" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="605e3304-f86b-42ea-a6dc-ed62a272b608">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Strava Activities"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Activity Date" class="java.lang.String"/>
+	<field name="Relative Effort" class="java.lang.Integer"/>
+	<field name="Bike Weight" class="java.math.BigDecimal"/>
+	<field name="Elapsed Time" class="java.lang.Integer"/>
+	<field name="Moving Time" class="java.lang.Integer"/>
+	<field name="Average Speed" class="java.math.BigDecimal"/>
+	<field name="Elevation Loss" class="java.math.BigDecimal"/>
+	<field name="Elevation Low" class="java.math.BigDecimal"/>
+	<field name="Elevation High" class="java.math.BigDecimal"/>
+	<field name="Average Grade" class="java.math.BigDecimal"/>
+	<field name="Average Positive Grade" class="java.lang.String"/>
+	<field name="Average Negative Grade" class="java.lang.String"/>
+	<field name="Max Cadence" class="java.lang.Integer"/>
+	<field name="Average Cadence" class="java.math.BigDecimal"/>
+	<field name="Average Heart Rate" class="java.math.BigDecimal"/>
+	<field name="Max Watts" class="java.lang.String"/>
+	<field name="Average Watts" class="java.math.BigDecimal"/>
+	<field name="Calories" class="java.lang.Integer"/>
+	<field name="Distance" class="java.math.BigDecimal"/>
+	<field name="Max Speed" class="java.math.BigDecimal"/>
+	<field name="Elevation Gain" class="java.lang.Integer"/>
+	<field name="Max Grade" class="java.math.BigDecimal"/>
+	<field name="Max Heart Rate" class="java.lang.Integer"/>
+	<field name="Activity ID" class="java.lang.String"/>
+	<group name="Activity Date">
+		<groupExpression><![CDATA[$F{Activity Date}]]></groupExpression>
+	</group>
+	<group name="Relative Effort">
+		<groupExpression><![CDATA[$F{Relative Effort}]]></groupExpression>
+	</group>
+	<group name="Bike Weight">
+		<groupExpression><![CDATA[$F{Bike Weight}]]></groupExpression>
+	</group>
+	<group name="Elapsed Time">
+		<groupExpression><![CDATA[$F{Elapsed Time}]]></groupExpression>
+	</group>
+	<group name="Moving Time">
+		<groupExpression><![CDATA[$F{Moving Time}]]></groupExpression>
+	</group>
+	<group name="Average Speed">
+		<groupExpression><![CDATA[$F{Average Speed}]]></groupExpression>
+	</group>
+	<group name="Elevation Loss">
+		<groupExpression><![CDATA[$F{Elevation Loss}]]></groupExpression>
+	</group>
+	<group name="Elevation Low">
+		<groupExpression><![CDATA[$F{Elevation Low}]]></groupExpression>
+	</group>
+	<group name="Elevation High">
+		<groupExpression><![CDATA[$F{Elevation High}]]></groupExpression>
+	</group>
+	<group name="Average Grade">
+		<groupExpression><![CDATA[$F{Average Grade}]]></groupExpression>
+	</group>
+	<group name="Average Positive Grade">
+		<groupExpression><![CDATA[$F{Average Positive Grade}]]></groupExpression>
+	</group>
+	<group name="Average Negative Grade">
+		<groupExpression><![CDATA[$F{Average Negative Grade}]]></groupExpression>
+	</group>
+	<group name="Max Cadence">
+		<groupExpression><![CDATA[$F{Max Cadence}]]></groupExpression>
+	</group>
+	<group name="Average Cadence">
+		<groupExpression><![CDATA[$F{Average Cadence}]]></groupExpression>
+	</group>
+	<group name="Average Heart Rate">
+		<groupExpression><![CDATA[$F{Average Heart Rate}]]></groupExpression>
+	</group>
+	<group name="Max Watts">
+		<groupExpression><![CDATA[$F{Max Watts}]]></groupExpression>
+	</group>
+	<group name="Average Watts">
+		<groupExpression><![CDATA[$F{Average Watts}]]></groupExpression>
+	</group>
+	<group name="Calories">
+		<groupExpression><![CDATA[$F{Calories}]]></groupExpression>
+	</group>
+	<group name="Distance">
+		<groupExpression><![CDATA[$F{Distance}]]></groupExpression>
+	</group>
+	<group name="Max Speed">
+		<groupExpression><![CDATA[$F{Max Speed}]]></groupExpression>
+	</group>
+	<group name="Elevation Gain">
+		<groupExpression><![CDATA[$F{Elevation Gain}]]></groupExpression>
+	</group>
+	<group name="Max Grade">
+		<groupExpression><![CDATA[$F{Max Grade}]]></groupExpression>
+	</group>
+	<group name="Max Heart Rate">
+		<groupExpression><![CDATA[$F{Max Heart Rate}]]></groupExpression>
+	</group>
+	<group name="Activity ID">
+		<groupExpression><![CDATA[$F{Activity ID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
