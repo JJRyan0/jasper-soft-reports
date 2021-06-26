@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="orders pie chart" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f9b1178c-1a52-4a84-a220-d0d6d9e5ee23">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "ORDERS"."SHIPCOUNTRY", 
+count( "ORDERS"."ORDERID") AS Order_Count
+FROM "ORDERS"
+GROUP BY "ORDERS"."SHIPCOUNTRY"]]>
+	</queryString>
+	<field name="SHIPCOUNTRY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SHIPCOUNTRY"/>
+		<property name="com.jaspersoft.studio.field.label" value="SHIPCOUNTRY"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ORDERS"/>
+	</field>
+	<field name="ORDER_COUNT" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="ORDER_COUNT"/>
+		<property name="com.jaspersoft.studio.field.label" value="ORDER_COUNT"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="96" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement x="0" y="0" width="550" height="96" backcolor="#7BD4C6" uuid="0f342389-1b85-4638-a313-78689f91d220"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Product Orders Segmentation By Country]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="278" y="0" width="277" height="96" uuid="f8a3be83-908d-44b9-bc2c-26c419d3ccee"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="224" splitType="Stretch">
+			<pie3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="60" y="10" width="430" height="212" uuid="1c0179b1-6a5c-4140-aed5-196a3535437e"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset maxCount="7">
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{SHIPCOUNTRY}]]></keyExpression>
+					<valueExpression><![CDATA[$F{ORDER_COUNT}]]></valueExpression>
+					<labelExpression><![CDATA[$F{ORDER_COUNT}+""]]></labelExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<frame>
+				<reportElement x="0" y="10" width="555" height="214" uuid="7ec03e50-a13c-46fa-b8a0-3ad35618db83"/>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>
